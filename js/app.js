@@ -14,17 +14,14 @@ function calcularDescuento() {
 
         const precioConDescuento = precioBase - (precioBase * descuento / 100);
 
-        // Mostrar el resultado en la página
         const resultado = `Producto: ${nombreProducto}\nPrecio con descuento: $${precioConDescuento.toFixed(2)}`;
         document.getElementById("resultado").textContent += resultado + "\n\n";
 
-        // Mostrar los valores en la consola
         console.log(nombre + ", El nombre del Producto es: " + nombreProducto);
         console.log(nombre + ", El precio Base del producto es: $" + precioBase);
         console.log(nombre + ", El Descuento (%) del producto es: " + descuento + "%");
         console.log(nombre + ", Este es el Precio con Descuento: $" + precioConDescuento.toFixed(2));
 
-        // Preguntar si el usuario desea calcular otro descuento
         const respuesta = prompt(nombre + ", ¿Desea calcular otro descuento? (Sí/No)").toLowerCase();
         if (respuesta !== "sí" && respuesta !== "si") {
             continuar = false;
