@@ -1,21 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PrimeraEntrega | Castellar Usta</title>
+    <title>Simulador</title>
     <link rel="stylesheet" href="./css/StylesMain.css">
 </head>
 <body>
-    <div class="container">
-    <h1>Simulador de Descuento</h1>
-    <button id="calcularButton">Calcular Precio con Descuento</button>
-    
-    <h2>Resultado</h2>
-    <ol id="resultado"></ol>
-</div>
-    
-<script src="./js/app.js" async></script>
-</body>
 
+<header>
+    <nav class="navbar">
+        <a href="#" class="logo">Simulador</a>
+            <ul class="nav-list">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="./index.html">Conversión de Moneda</a></li>
+                <li><a href="./page/descuentos.html">Simulador de Descuento</a></li>
+                <!-- Agrega más elementos del menú según sea necesario -->
+            </ul>
+    </nav>
+</header>
+
+<div class="container2">
+    <div class="container3">
+        <h1>Simulador de Conversión de Moneda</h1>
+        
+        <form id="formConversion">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" placeholder="Ingrese su nombre" required>
+
+            <label for="monto">Monto:</label>
+            <input type="number" id="monto" placeholder="Ingrese el monto" required>
+
+            <label for="monedaDesde">Moneda Desde:</label>
+            <select id="monedaDesde">
+                <option value="usd">Dólares estadounidenses (USD)</option>
+                <option value="eur">Euros (EUR)</option>
+                <option value="gbp">Libras esterlinas (GBP)</option>
+                <!-- Agrega más opciones según sea necesario -->
+            </select>
+
+            <label for="monedaHacia">Moneda Hacia:</label>
+            <select id="monedaHacia">
+                <option value="usd">Dólares estadounidenses (USD)</option>
+                <option value="eur">Euros (EUR)</option>
+                <option value="gbp">Libras esterlinas (GBP)</option>
+                <!-- Agrega más opciones según sea necesario -->
+            </select>
+
+            <button type="button" onclick="realizarConversion()">Convertir</button>
+        </form>
+
+        <p id="resultado"></p>
+    </div>
+</div>
+
+<footer>
+        <p>&copy; 2023 Simuladores</p>
+</footer>
+
+<script src="./js/moneda.js" defer></script>
+<script src="./js/conversion.js" defer></script>
+</body>
 </html>
