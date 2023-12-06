@@ -28,10 +28,4 @@ function calcularDescuento() {
         }
     }
 }
-
-<<<<<<< HEAD
 document.getElementById("calcularButton").addEventListener("click", calcularDescuento);
-=======
-// Asignar la función calcularDescuento al evento 'click' del botón
-document.getElementById("calcularButton").addEventListener("click", calcularDescuento);
->>>>>>> f6aaf0599fb67d30c2f7ac8d2266795df009de34

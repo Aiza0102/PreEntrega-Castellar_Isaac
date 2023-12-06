@@ -3,64 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Bienvenido a AizaStore, tu mejor tienda para la compra de compotentes para tu pc o la tecnologia mas reciente.">
+    <meta name="description" 
+    content="Aqui puede encontrar un simulador interactivo para calcular los decuentos de tus productos.">
     <title>AizaSimulator - Castellar Usta</title>
     <!-- Enlaces a hojas de estilo -->
-    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="./css/StylesMain.css">
-    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../css/StylesMain.css">
+    <link rel="stylesheet" href="../bootstrap-5.0.2-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <!-- Encabezado de la página -->
     <header>
         <div class="nav-bar">
             <a href="./index.html" class="logo">AizaSimulator</a>
             <div class="navigation">
                 <div class="nav-items">
                     <i class="uil uil-times nav-close-btn"></i>
-                    <a href="./index.html"><i class="uil uil-home"></i> Home</a>
-                    <a href="./pages/descuentos.html"><i class="uil uil-percentage"></i> Calcular Descuento</a>
-                    <a href="./pages/convertidor.html"><i class="uil uil-usd-circle"></i> Calcular Conversion de Moneda</a>
-                    <a href="./pages/carritocompra.html"><i class="uil uil-shopping-cart-alt"></i> Carrito de compra</a>
+                    <a href="../index.html"><i class="uil uil-home"></i> Home</a>
+                    <a href="./descuentos.html"><i class="uil uil-percentage"></i> Calcular Descuento</a>
+                    <a href="./convertidor.html"><i class="uil uil-usd-circle"></i> Calcular Conversion de Moneda</a>
+                    <a href="./carritocompra.html"><i class="uil uil-shopping-cart-alt"></i> Carrito de compra</a>
                 </div>
             </div>
             <i class="uil uil-apps nav-menu-btn"></i>
         </div>
     </header>
 
-    <section class="home">
+    <section class="home2">
         <div class="swiper bg-slider">
             <div class="swiper-wrapper">
                 <div class="swiper-slide dark-layer">
-                    <img src="img/img5.jpg" alt="Imagen 1 demostrativa para el home del sitio web.">
-                    <div class="text-content">
-                        <h2 class="title">AIZA SIMULATOR<span> VARIETY OF SIMULATORS</span></h2>
-                        <p>Aprende a manejar tus finanzas con nuestras simulaciones interactivas.</p>
-                        <button class="read-btn">Leer mas.<i class="uil uil-arrow-right"></i></button>
-                    </div>
-                </div>
-                <div class="swiper-slide dark-layer">
-                    <img src="img/img4.jpg" alt="Imagen 2 demostrativa para el home del sitio web.">
-                    <div class="text-content">
-                        <h2 class="title">AIZA STORE<span> VARIETY OF SIMULATORS</span></h2>
-                        <p>Toma el control de tu futuro financiero con nuestras simulaciones.</p>
-                        <button class="read-btn">Leer mas.<i class="uil uil-arrow-right"></i></button>
+                    <img src="../img/img7.jpg" alt="Imagen 2 demostrativa de como podria verse tu setup gamer.">
+                    <div class="text-content2">
+                        <h2 class="title2">Simulador<span> CARRITO DE COMPRAS.</span></h2>
+                        <p class="p2">Aquí encontraras un simulador interactivo que te ayudara a saber el precio final de esos productos con descuentos que tanto quieres.</p>
+                        <button class="read-btn22">Realizar simulacion.<i class="uil uil-arrow-down"></i></button>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Miniaturas del slider -->
         <div class="bg-slider-thumbs">
-            <div class="swiper-wrapper thumbs-container">
-                <img src="img/img5.jpg" class="swiper-slide"
-                    alt="Mini Imagen 1 para slider demostrativa para el home del sitio web.">
-                <img src="img/img4.jpg" class="swiper-slide"
-                    alt="Mini Imagen 2 para slider demostrativa para el home del sitio web.">
+            <div class="swiper-wrapper">
+            </div>
+        </div>
+    </section>
+
+    <section class="carro">
+        <div id="app">
+            <h1>Simulador de Compra</h1>
+            <div id="productos">
+                <div class="producto" data-id="1" data-precio="10">
+                    <span>Producto 1 - $10</span>
+                    <button class="agregar">Agregar al carrito</button>
+                </div>
+                <div class="producto" data-id="2" data-precio="20">
+                    <span>Producto 2 - $20</span>
+                    <button class="agregar">Agregar al carrito</button>
+                </div>
+                <!-- Agrega más productos según sea necesario -->
+            </div>
+            <div id="carrito">
+                <h2>Carrito de Compra</h2>
+                <ul id="lista-carrito"></ul>
+                <p>Total: $<span id="total">0.00</span></p>
+                <button id="pagar">Pagar</button>
             </div>
         </div>
     </section>
@@ -105,11 +114,10 @@
             </div>
         </div>
     </footer>
-
-    <!-- Scripts JavaScript -->
-    <script src="./js/swiper-bundle.min.js"></script>
-    <script src="./js/main.js"></script>
-    <script src="./bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
-
+        <!-- Scripts JavaScript -->
+        <script src="../js/Simulador-carrito/carrito.js"></script>
+        <script src="../js/swiper-bundle.min.js"></script>
+        <script src="../js/main.js"></script>
+        <script src="../bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
 </body>
 </html>
