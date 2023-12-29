@@ -321,7 +321,7 @@ header .nav-bar {
     text-shadow: var(--text-shadow);
     margin-bottom: 20px;
     position: relative;
-    left: 65%;
+    left: 70%;
     transform: translateY(-50px);
     opacity: 0;
 }
@@ -329,7 +329,7 @@ header .nav-bar {
 .swiper-slide-active .text-content2 .title2 {
     transform: translateY(0);
     position: relative;
-    left: 59%;
+    left: 75%;
     opacity: 1;
     transition: 1s ease;
     transition-delay: 0.3s;
@@ -352,7 +352,7 @@ header .nav-bar {
     border-right: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: var(--box-shadow);
     position: relative;
-    left: 57%;
+    left: 65%;
     transform: translateY(-80px);
     opacity: 0;
 }
@@ -415,7 +415,7 @@ header .nav-bar {
     border-radius: 10px;
     cursor: pointer;
     position: relative;
-    left: 92%;
+    left: 98%;
     transform: translateX(-50px);
     opacity: 0;
 }
@@ -586,34 +586,128 @@ header .nav-bar {
 
 /* carritocompra css*/
 
-#app {
-    max-width: 800px;
-    margin: 20px auto;
-    text-align: center;
+#simulador-compra {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
 }
 
-.producto {
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin: 10px;
+#productos,
+#carrito {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 48%;
 }
 
 #carrito {
-    border: 1px solid #ddd;
-    padding: 10px;
+    position: relative;
 }
 
-#carrito ul {
+#lista-carrito {
     list-style: none;
     padding: 0;
 }
 
-#carrito li {
-    margin-bottom: 5px;
+#total {
+    font-weight: bold;
+}
+
+#vaciar-carrito,
+#pagar {
+    margin-top: 10px;
+}
+
+#opciones-adicionales {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#opciones-adicionales button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#opciones-adicionales button:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+.producto {
+    background-color: #fff;
+}
+
+.producto h3 {
+    font-size: 1.2em;
+}
+
+.producto p {
+    margin-bottom: 10px;
+}
+
+.producto button {
+    font-size: 16px;
+}
+
+#vaciar-carrito,
+#pagar {
+    margin-top: 10px;
+}
+
+#vaciar-carrito,
+#pagar,
+.eliminar {
+    font-size: 14px;
+}
+
+#vaciar-carrito,
+#pagar {
+    width: 100%;
+}
+
+#vaciar-carrito,
+#pagar,
+.eliminar {
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.producto h3 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.producto {
+    flex: 1 0 20%;
+    min-height: 200px; 
+    height: 400px;
+}
+
+
+#lista-carrito {
+    list-style: none;
+    padding: 0;
+}
+
+.list-group-item {
+    margin-bottom: 10px;
+}
+
+.eliminar {
+    cursor: pointer;
 }
 
 /* footer */
-
 footer {
     padding: 40px 0;
     background: linear-gradient(100deg, #646464, #000);

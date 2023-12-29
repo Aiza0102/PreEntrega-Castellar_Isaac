@@ -21,7 +21,7 @@ function calcularDescuento() {
         console.log(nombre + ", El precio Base del producto es: $" + precioBase);
         console.log(nombre + ", El Descuento (%) del producto es: " + descuento + "%");
         console.log(nombre + ", Este es el Precio con Descuento: $" + precioConDescuento.toFixed(2));
-
+        
         const respuesta = prompt(nombre + ", ¿Desea calcular otro descuento? (Sí/No)").toLowerCase();
         if (respuesta !== "sí" && respuesta !== "si") {
             continuar = false;

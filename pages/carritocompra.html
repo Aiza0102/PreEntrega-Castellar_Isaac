@@ -51,27 +51,30 @@
         </div>
     </section>
 
-    <section class="carro">
-        <div id="app">
-            <h1>Simulador de Compra</h1>
-            <div id="productos">
-                <div class="producto" data-id="1" data-precio="10">
-                    <span>Producto 1 - $10</span>
-                    <button class="agregar">Agregar al carrito</button>
+    <section id="simulador-compra">
+        <div id="productos" class="row">
+            <div class="col-md-3 mb-4">
+                <div class="producto p-3 border-secondary rounded">
+                    <h3 class="mb-2"></h3>
                 </div>
-                <div class="producto" data-id="2" data-precio="20">
-                    <span>Producto 2 - $20</span>
-                    <button class="agregar">Agregar al carrito</button>
-                </div>
-                <!-- Agrega más productos según sea necesario -->
-            </div>
-            <div id="carrito">
-                <h2>Carrito de Compra</h2>
-                <ul id="lista-carrito"></ul>
-                <p>Total: $<span id="total">0.00</span></p>
-                <button id="pagar">Pagar</button>
             </div>
         </div>
+        
+        <div id="carrito">
+            <h2>Carrito de Compras</h2>
+            <ul id="lista-carrito">
+            </ul>
+            <p>Total: $<span id="total">0.00</span></p>
+            <button id="pagar" class="btn btn-success btn-block">Pagar</button>
+            <button id="vaciar-carrito" class="btn btn-danger btn-block">Vaciar Carrito</button>
+        </div>
+    </section>
+
+    <section id="opciones-adicionales">
+        <button id="cargar-productos">Cargar Productos (LOCAL JS)</button>
+        <button id="cargar-desde-api">Cargar Productos (API)</button>
+        <button id="buscar-productos">Buscar Productos en el Carrito</button>
+        <button id="historial-compras">Historial de Compras</button>
     </section>
     <footer class="bg-dark text-light py-5">
         <div class="container">
@@ -116,6 +119,8 @@
     </footer>
         <!-- Scripts JavaScript -->
         <script src="../js/Simulador-carrito/carrito.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="../js/swiper-bundle.min.js"></script>
         <script src="../js/main.js"></script>
         <script src="../bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
